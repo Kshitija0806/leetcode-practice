@@ -25,18 +25,23 @@ public:
 //         }
 //         return true;
         
-        if(x < 0){
-            return false;
-        }
+//         if(x < 0){
+//             return false;
+//         }
         
-        int n=x;
-        unsigned long int sum=0;
+//         int n=x;
+//         unsigned long int sum=0;
         
-        while(n!=0){
-            sum=sum*10+n%10;
-            n=n/10;
-        }
+//         while(n!=0){
+//             sum=sum*10+n%10;
+//             n=n/10;
+//         }
         
-        return (sum==x);
+//         return (sum==x);
+        
+        string s=to_string(x);
+        string h=s;
+        reverse(h.begin(),h.end());
+        return(h==s);
     }
 };
