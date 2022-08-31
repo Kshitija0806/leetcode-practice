@@ -15,7 +15,8 @@ public:
             //Now we will make this character with other characters in string
             for(int j=1;j<n;j++){
                 //we will have this bool variable to keep an eye on the matches
-                if(ch!=strs[j][i]){
+                 if((strs[j].size() < i) || (ch!=strs[j][i])){ 
+                     //we have to add this additional condition becoz all string are not of same length
                     match=false;
                     break;
                 }
