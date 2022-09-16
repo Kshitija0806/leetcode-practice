@@ -1,20 +1,21 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-      //An naive approach : To use set
+      //Brute force
         
-        set<int> st;
+        //Using set
+        
+        set<int> st;  //here in the set we have to maintain order of elements
         
         for(int i=0;i<nums.size();i++){
             st.insert(nums[i]);
         }
         
-        int i=0;
+        int k=st.size();
+        int j=0;
         for(auto x: st){
-            nums[i]=x;
-            i++;
+            nums[j++]=x;
         }
-        
-        return st.size();
+        return k;
     }
 };
